@@ -1,73 +1,44 @@
-# Niya Venture Studio — Website
+# Niya Venture Studio website
 
-Static marketing site for **Niya Venture Studio** ("Building the Muslim Economy"):
-a platform connecting founders, investors, and service providers across 7 global regions.
+Static, multi-page marketing site for Niya Venture Studio. It preserves the existing navy, coral and editorial type identity while replacing the single scrolling page with clear audience paths.
 
-Plain HTML/CSS/JS — no build step, no dependencies beyond Google Fonts (Sora, DM Serif Display).
+## Routes
 
-## Structure
+- `/` — home, six audience paths and Edition 1 recap
+- `/connect/` — Niya Connect early access (pre-launch)
+- `/founders/`, `/investors/`, `/providers/`, `/partners/`
+- `/portfolio/` and starter founder-story pages
+- `/events/`, `/events/halal-money-forum-nj/`, `/summit/`
+- `/signup/` — single role-based intake
+- `/news/`, `/thanks/`, `/404.html`
 
-```
-.
-├── index.html            # All page markup (single page, anchor-nav sections)
-├── css/
-│   └── styles.css        # All styles (design tokens as CSS variables in :root)
-├── js/
-│   └── main.js           # Nav shadow, modals, forms, scroll-reveal
-└── assets/images/
-    ├── logo-niya-sf.jpg
-    ├── team-taqi-hasan.jpg
-    └── team-tanveer-ali.jpg
-```
-
-## Page sections (`index.html`)
-
-| Anchor | Section |
-| --- | --- |
-| `#platform` | Value proposition |
-| *(feature grid)* | Features |
-| `#for-lps` | For limited partners / investors |
-| `#portfolio` | Portfolio |
-| `#segments` | Market segments |
-| `#traction` | Traction |
-| `#team` | Team / about |
-| `#halal-money` | Halal Money Forum |
-| `#join` | Join form |
-| *(events)* | Niya Startup Summit 2026 feature block |
-
-## Run locally
-
-Open `index.html` in a browser, or serve the folder:
+## Local preview
 
 ```bash
-python3 -m http.server 8000
-# → http://localhost:8000
+python3 -m http.server 4173
 ```
 
-## Deploy (GitHub Pages)
+Open `http://127.0.0.1:4173/`.
 
-Repo → **Settings → Pages → Deploy from branch → `main` / root**.
+## Netlify handoff
 
-## Design tokens
+This site is ready for a no-build Netlify deployment: set the publish directory to the repository root.
 
-Defined at the top of `css/styles.css`:
+Two static Netlify Forms are included:
 
-`--navy #1F4E79` · `--navy-dark #0D2137` · `--orange #FF6B35` · `--cream #FDF8F2` · `--gold #C9952A` · `--purple #6D5BD0` · `--teal #1D9E75`
+- `niya-network` — the single Niya intake form; hidden routing owner: Tanveer.
+- `halal-money-forum-pitchfest` — Pitchfest interest form; hidden routing owner: Taqi.
 
-## JavaScript behavior (`js/main.js`)
+Before publishing, configure Netlify Form notifications or an approved Zapier/Make/CRM integration for both form names. Do not treat a hidden owner field as delivery routing by itself.
 
-- **Nav**: adds a `scrolled` class (shadow) after 40px of scroll.
-- **Waitlist / Design Partner modal** (`openModal('demo' | 'partner')`): one modal, content swapped by type.
-- **Summit registration modal**: builds a `mailto:events@niyasf.com` link with the registrant's details.
-- **Join form** + role buttons (`setJoinRole`): preselects the role dropdown and scrolls to the form.
-- **Scroll reveal**: `IntersectionObserver` adds `.visible` to `.reveal` elements.
-- `Esc` closes any open modal.
+## Content and launch items still requiring owner input
 
-## Known limitations
+- Final founder bios, photography, and company-approved copy for VePay, Halal Wallet and Ummah Unite.
+- Final Halal Money Forum venue, program, and Pitchfest selection details.
+- Approved privacy notice, terms, and analytics decision.
+- Exact legacy URLs and the target destination for the `niyasummit.com` 301 redirects. Do not create broad redirects until the redirect inventory is supplied.
+- Final sourced facts file approval for any new metrics beyond the Summit recap.
 
-- The **waitlist, design-partner, and join forms do not submit anywhere** — they only show a success
-  message client-side. Wire them to a backend or form service (Formspree, Netlify Forms, etc.) before relying on them.
-- The summit form relies on the visitor's mail client via `mailto:`.
-- Images are large relative to how they're displayed (logo is 3125×3125 shown at ~40px tall); resizing/compressing
-  them would noticeably improve load time.
-- No favicon or Open Graph / social-share tags.
+## Sources used in the current build
+
+The Edition 1 recap uses only figures verified in **Niya Global Startup Summit 2026 Event Report**: 400+ attendees, 50+ speakers and presenters, 14 live-pitch startups, and 50+ hackathon builders. Approved Summit photography lives in `assets/events/` and is web-optimized.
