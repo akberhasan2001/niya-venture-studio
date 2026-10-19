@@ -1,6 +1,6 @@
 # Niya Venture Studio website
 
-Static, multi-page marketing site for Niya Venture Studio. It preserves the existing navy, coral and editorial type identity while replacing the single scrolling page with clear audience paths.
+React marketing site for Niya Venture Studio. It preserves the navy, coral and editorial identity while presenting clear audience paths across clean routes. Vite produces a static `dist/` deployment for Netlify, and Anime.js provides accessible viewport reveals and metric count-ups.
 
 ## Routes
 
@@ -10,21 +10,24 @@ Static, multi-page marketing site for Niya Venture Studio. It preserves the exis
 - `/portfolio/` and starter founder-story pages
 - `/events/`, `/events/halal-money-forum-nj/`, `/summit/`
 - `/signup/` — single role-based intake
-- `/news/`, `/thanks/`, `/404.html`
+- `/news/`, `/thanks/`, plus a React 404 fallback
 
 ## Local preview
 
 ```bash
-python3 -m http.server 4173
+pnpm install
+pnpm dev
 ```
 
-Open `http://127.0.0.1:4173/`.
+Open the local URL printed by Vite, normally `http://127.0.0.1:5173/`.
+
+Create a production build with `pnpm build`, then check it with `pnpm preview`.
 
 ## Netlify handoff
 
-This site is ready for a no-build Netlify deployment: set the publish directory to the repository root.
+The checked-in `netlify.toml` sets the build command to `pnpm run build`, the Node runtime to 22, and the publish directory to `dist`. The SPA fallback in `app/public/_redirects` preserves direct access to every clean URL.
 
-Two static Netlify Forms are included:
+Two Netlify Forms are declared statically in `app/index.html` and rendered as accessible React forms:
 
 - `niya-network` — the single Niya intake form; hidden routing owner: Tanveer.
 - `halal-money-forum-pitchfest` — Pitchfest interest form; hidden routing owner: Taqi.
