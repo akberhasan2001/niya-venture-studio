@@ -37,6 +37,78 @@
 @media(max-width:860px) { .wm-browser-heading { align-items: flex-start; flex-direction: column; } .wm-card-body { padding: 28px; } }
 @media(max-width:600px) { .wm-event-grid { grid-template-columns: 1fr; } .wm-tabs { width: 100%; } .wm-tabs button { flex: 1; padding: 11px 10px; } .wm-media-card { min-height: 450px; } }
 
+.site-nav .nav-links > a:not(.button) {
+  position: relative;
+  padding-block: 10px;
+  transition: color 220ms ease;
+}
+
+.site-nav .nav-links > a:not(.button)::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 3px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 300ms cubic-bezier(.22,1,.36,1);
+}
+
+.site-nav .nav-links > a:not(.button):is(:hover,:focus-visible) {
+  color: #ffb292;
+}
+
+.site-nav .nav-links > a:not(.button):is(:hover,:focus-visible)::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+.site-nav .nav-links > .button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 300ms ease, transform 300ms cubic-bezier(.22,1,.36,1);
+}
+
+.site-nav .nav-links > .button::after {
+  content: "";
+  position: absolute;
+  inset: -50% auto -50% -75%;
+  width: 45%;
+  background: linear-gradient(90deg,transparent,#ffffff40,transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.site-nav .nav-links > .button:is(:hover,:focus-visible) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px #ff6b3538;
+}
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .site-nav .nav-links > .button:hover::after {
+    animation: nav-button-sheen 600ms ease-out;
+  }
+}
+
+@keyframes nav-button-sheen {
+  to { left: 135%; }
+}
+
+.site-nav .nav-links > a:focus-visible {
+  outline: 2px solid #ffb292;
+  outline-offset: 5px;
+}
+
+@media (max-width:860px) {
+  .site-nav .nav-links > a:not(.button) { align-self: flex-start; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .site-nav .nav-links > .button:is(:hover,:focus-visible) { transform: none; }
+}
+
 .site-header {
   transition: background-color 300ms ease, box-shadow 300ms ease, backdrop-filter 300ms ease;
 }
