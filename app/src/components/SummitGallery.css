@@ -1,0 +1,36 @@
+.summit-gallery { padding-top: 0; }
+.summit-collage { display: grid; grid-template-columns: 1.25fr 1fr 0.85fr; grid-template-rows: 220px 220px; gap: 16px; }
+.summit-tile { position: relative; padding: 0; overflow: hidden; border: 0; border-radius: 16px; background: var(--navy); cursor: zoom-in; text-align: left; color: white; }
+.summit-tile-0 { grid-row: span 2; }
+.summit-tile-2 { grid-column: 3; grid-row: 1 / span 2; }
+.summit-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s ease; }
+.summit-tile::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent,#061421bd); pointer-events: none; }
+.summit-tile-caption { position: absolute; z-index: 1; bottom: 20px; left: 20px; right: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font: 700 12px/1.5 var(--sans); }
+.summit-expand { display: grid; place-items: center; flex-shrink: 0; width: 32px; height: 32px; border: 1px solid #ffffff70; border-radius: 50%; background: #0d213740; }
+.summit-tile:hover img { transform: scale(1.04); }
+.summit-tile:focus-visible { outline: 3px solid var(--orange); outline-offset: 5px; }
+.summit-gallery-note { font-size: 11px; color: var(--muted); margin: 18px 0 0; }
+.summit-lightbox { width: min(1080px,calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid #ffffff25; border-radius: 16px; color: white; background: #091725; }
+.summit-lightbox::backdrop { background: #020811ed; backdrop-filter: blur(10px); }
+.summit-viewer { padding: 20px 26px; }
+.summit-viewer-top,.summit-viewer-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 12px; }
+.summit-viewer-top { margin-bottom: 18px; color: #ffffffac; }
+.summit-viewer button { border: 1px solid #ffffff40; border-radius: 100px; color: white; background: transparent; padding: 9px 16px; min-height: 44px; font: 600 12px/1.5 var(--sans); cursor: pointer; }
+.summit-viewer button:hover { background: #ffffff16; }
+.summit-viewer button:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.summit-viewer-top button span { margin-left: 12px; font-size: 20px; }
+.summit-viewer figure { margin: 0; }
+.summit-viewer figure img { width: 100%; height: min(65dvh,670px); object-fit: contain; background: #050d16; }
+.summit-viewer figcaption { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; font-size: 13px; }
+.summit-viewer figcaption span,.summit-viewer-controls p { color: #ffffff9e; }
+@media(max-width:760px) {
+  .summit-collage { grid-template-columns: 1fr 1fr; grid-template-rows: 250px 190px; gap: 12px; }
+  .summit-tile-0 { grid-row: auto; grid-column: 1 / -1; }
+  .summit-tile-2 { grid-column: 2; grid-row: 2 / span 2; }
+  .summit-tile-3 { height: 190px; }
+  .summit-tile-caption { left: 14px; right: 14px; bottom: 14px; font-size: 11px; }
+  .summit-viewer { padding: 16px; }
+  .summit-viewer figure img { height: 56dvh; }
+  .summit-viewer-controls p { display: none; }
+}
+@media(prefers-reduced-motion:reduce) { .summit-tile img { transition: none; } .summit-tile:hover img { transform: none; } }
