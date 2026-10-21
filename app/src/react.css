@@ -1,3 +1,21 @@
+.stacked-list .offering-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0,1fr);
+  gap: 18px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: background-color 220ms ease;
+}
+.offering-row > span { padding-top: 5px; color: var(--orange); font-size: 12px; font-weight: 800; }
+.offering-row h3 { transition: color 220ms ease; }
+.offering-arrow { display: inline-block; transition: transform 250ms ease; }
+.offering-row:is(:hover,:focus-visible) { background: rgba(255,255,255,.55); }
+.offering-row:is(:hover,:focus-visible) h3 { color: var(--navy-2); }
+.offering-row:is(:hover,:focus-visible) .offering-arrow { transform: translateX(5px); }
+.offering-row:focus-visible { outline: 2px solid var(--orange); outline-offset: 5px; }
+@media(prefers-reduced-motion:reduce) { .offering-row:is(:hover,:focus-visible) .offering-arrow { transform: none; } }
+
 /* Watermelon UI card-5/card-7/tabs-1 adapted to Niya design tokens. */
 .wm-connect.hero-note { border-radius: 20px; padding: 30px; border: 1px solid rgba(255,255,255,.4); box-shadow: 0 24px 64px #0003; background: linear-gradient(140deg,#fff,#f7f2eb); }
 .wm-connect-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 38px; gap: 12px; }
