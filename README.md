@@ -8,7 +8,8 @@ React marketing site for Niya Venture Studio. It preserves the navy, coral and e
 - `/connect/` — Niya Connect early access (pre-launch)
 - `/founders/`, `/investors/`, `/providers/`, `/partners/`
 - `/portfolio/` and starter founder-story pages
-- `/events/`, `/events/halal-money-forum-nj/`, `/summit/`
+- `/events/`, `/events/halal-money-forum-nj/` (redirect to the official event website), `/summit/`
+- `/summit/agenda/`, `/summit/hackathon/` — Edition 1 program archives
 - `/signup/` — single role-based intake
 - `/news/`, `/thanks/`, plus a React 404 fallback
 
@@ -37,11 +38,15 @@ Before publishing, configure Netlify Form notifications or an approved Zapier/Ma
 ## Content and launch items still requiring owner input
 
 - Final founder bios, photography, and company-approved copy for VePay, Halal Wallet and Ummah Unite.
-- Final Halal Money Forum venue, program, and Pitchfest selection details.
+- November 14 attendance and registration are handled at `https://muslimeconomysummit.org/`.
 - Approved privacy notice, terms, and analytics decision.
-- Exact legacy URLs and the target destination for the `niyasummit.com` 301 redirects. Do not create broad redirects until the redirect inventory is supplied.
+- Hosting owner: activate the prepared `niyasummit.com` redirects after confirming ownership, domain aliases, HTTPS, and DNS. See `docs/summit-migration.md`.
 - Final sourced facts file approval for any new metrics beyond the Summit recap.
 
 ## Sources used in the current build
 
 The Edition 1 recap uses only figures verified in **Niya Global Startup Summit 2026 Event Report**: 400+ attendees, 50+ speakers and presenters, 14 live-pitch startups, and 50+ hackathon builders. Approved Summit photography lives in `assets/events/` and is web-optimized.
+
+The historical speaker roster, agenda, hackathon program and partner acknowledgments
+were migrated from the supplied `niya-summit-website.zip` on October 26, 2026.
+Source details, exclusions and redirect handoff are recorded in `docs/summit-migration.md`.

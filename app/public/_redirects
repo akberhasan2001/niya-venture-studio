@@ -1,3 +1,20 @@
 /events/halal-money-forum-nj  https://muslimeconomysummit.org/  301!
 /events/halal-money-forum-nj/  https://muslimeconomysummit.org/  301!
+# Activate domain redirects by attaching both old hostnames to this Netlify site.
+https://niyasummit.com/agenda.html  https://niyasf.com/summit/agenda/  301!
+https://niyasummit.com/hackathon.html  https://niyasf.com/summit/hackathon/  301!
+https://niyasummit.com/ummah-unite-muslim-event-platform.html  https://niyasf.com/portfolio/ummah-unite/  301!
+https://niyasummit.com/index.html  https://niyasf.com/summit/  301!
+https://niyasummit.com/  https://niyasf.com/summit/  301!
+https://www.niyasummit.com/agenda.html  https://niyasf.com/summit/agenda/  301!
+https://www.niyasummit.com/hackathon.html  https://niyasf.com/summit/hackathon/  301!
+https://www.niyasummit.com/ummah-unite-muslim-event-platform.html  https://niyasf.com/portfolio/ummah-unite/  301!
+https://www.niyasummit.com/index.html  https://niyasf.com/summit/  301!
+https://www.niyasummit.com/  https://niyasf.com/summit/  301!
+# Legacy Summit routes on the Niya site, after the hostname-specific rules.
+/agenda.html  /summit/agenda/  301
+/hackathon.html  /summit/hackathon/  301
+/summit/agenda.html  /summit/agenda/  301
+/summit/hackathon.html  /summit/hackathon/  301
+/ummah-unite-muslim-event-platform.html  /portfolio/ummah-unite/  301
 /*  /index.html  200
