@@ -11,7 +11,7 @@ export function ConnectCard() {
   return <aside className="hero-note wm-connect" data-hero aria-label="Niya Connect early access">
     <div className="wm-connect-top"><StatusBadge>In development</StatusBadge><span className="wm-orbit-mark" aria-hidden="true">↗</span></div>
     <p className="eyebrow">Coming in 2027</p><h2>Niya Connect</h2>
-    <p>Early access to a new intelligence and connection layer for the global Muslim economy.</p>
+    <p>We’re building market intelligence for founders, investors and ecosystem partners, starting with the global Muslim economy.</p>
     <div className="wm-card-footer"><Link className="wm-action" to="/connect/">Explore early access <span aria-hidden="true">↗</span></Link></div>
   </aside>;
 }
