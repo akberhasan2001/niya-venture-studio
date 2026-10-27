@@ -37,7 +37,9 @@ Before publishing, configure Netlify Form notifications or an approved Zapier/Ma
 
 ## Content and launch items still requiring owner input
 
-- Final founder bios, photography, and company-approved copy for VePay, Halal Wallet and Ummah Unite.
+- Taqi's review of the researched VePay, HalalWallet and Ummah Unite profiles;
+  company approval and a verified Robert Mallon headshot remain outstanding.
+  Public sources and portrait provenance are documented in `docs/portfolio-sources.md`.
 - November 14 attendance and registration are handled at `https://muslimeconomysummit.org/`.
 - Approved privacy notice, terms, and analytics decision.
 - Hosting owner: activate the prepared `niyasummit.com` redirects after confirming ownership, domain aliases, HTTPS, and DNS. See `docs/summit-migration.md`.
