@@ -30,10 +30,17 @@ The checked-in `netlify.toml` sets the build command to `pnpm run build`, the No
 
 Two Netlify Forms are declared statically in `app/index.html` and rendered as accessible React forms:
 
-- `niya-network` — the single Niya intake form; hidden routing owner: Tanveer.
-- `halal-money-forum-pitchfest` — Pitchfest interest form; hidden routing owner: Taqi.
+- `niya-network` — the single Niya intake form; intended recipient: Taqi, `taqi@niyasf.com`.
+- `halal-money-forum-pitchfest` — legacy Pitchfest form definition; intended recipient: Taqi, `taqi@niyasf.com`. The event page currently redirects to the official event site.
 
-Before publishing, configure Netlify Form notifications or an approved Zapier/Make/CRM integration for both form names. Do not treat a hidden owner field as delivery routing by itself.
+Before publishing, the hosting owner must enable Netlify Forms and add an email
+submission notification for `niya-network` addressed to `taqi@niyasf.com` in the
+site's Netlify form notification settings. Submit a test after deployment and
+verify both the Netlify submission record and receipt in Taqi's inbox.
+The hidden `routing_owner` and `routing_email` fields record the intended recipient;
+they do not configure email delivery. No dashboard notification has been configured
+or verified from this checkout. If the legacy Pitchfest form is re-enabled, give it
+the same notification recipient and test it separately.
 
 ## Content and launch items still requiring owner input
 
