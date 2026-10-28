@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
-import { Link, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Link, NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import logo from "../../logo-niya-sf.jpg";
 import taqiPhoto from "../../team-taqi-hasan.jpg";
 import tanveerPhoto from "../../team-tanveer-ali.jpg";
 import summitRecap from "../../assets/events/summit-edition-one-recap.jpg";
 import summitCommunity from "../../assets/events/summit-community.jpg";
 import summitStage from "../../assets/events/summit-stage.jpg";
-import { ConnectCard, EventBrowser } from "./components/WatermelonUI.jsx";
+import { EventBrowser } from "./components/WatermelonUI.jsx";
 import SummitGallery from "./components/SummitGallery.jsx";
 import SummitArchive, { SummitArchiveNav, SummitAgenda, SummitHackathon } from "./components/SummitArchive.jsx";
 import CompanyProfile from "./components/CompanyProfile.jsx";
@@ -142,23 +142,24 @@ function usePageLifecycle(rootRef) {
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { pathname } = useLocation();
+  const menuButton = useRef(null);
+  const { pathname, hash } = useLocation();
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > 18);
     update();
     window.addEventListener("scroll", update, { passive: true });
     return () => window.removeEventListener("scroll", update);
   }, []);
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => setOpen(false), [pathname, hash]);
   return <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
-    <nav className="site-nav wrap" aria-label="Main navigation">
-      <Link className="brand" to="/" aria-label="Niya Venture Studio home"><img src={logo} alt="Niya Venture Studio" /></Link>
-      <button className="menu-button" type="button" aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}>
+    <nav className="site-nav wrap" aria-label="Main navigation" onKeyDown={event => { if (event.key === "Escape" && open) { setOpen(false); menuButton.current?.focus(); } }}>
+      <Link className="brand" to="/" aria-label="Niya Venture Studio home"><img src={logo} alt="" width="58" height="58" /><span className="brand-wordmark">Niya<span>Venture Studio</span></span></Link>
+      <button ref={menuButton} className="menu-button" type="button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="nav-links" onClick={() => setOpen(!open)}>
         <span></span><span></span><span></span><span className="sr-only">Open menu</span>
       </button>
-      <div id="nav-links" className={`nav-links${open ? " open" : ""}`}>
-        <Link to="/connect/">Niya Connect</Link><Link to="/portfolio/">Studio</Link><Link to="/events/">Events</Link>
-        <Link to="/news/">News</Link><Link to="/#about">About</Link><Link className="button button-small" to="/signup/">Join Niya</Link>
+      <div id="nav-links" className={`nav-links${open ? " open" : ""}`} onClick={event => { if (event.target.closest("a")) setOpen(false); }}>
+        <NavLink to="/connect/">Niya Connect</NavLink><NavLink to="/portfolio/">Studio</NavLink><NavLink to="/events/">Events</NavLink>
+        <NavLink to="/news/">News</NavLink><Link to="/#about">About</Link><NavLink className="button button-small" to="/signup/">Join Niya <span aria-hidden="true">↗</span></NavLink>
       </div>
     </nav>
   </header>;
@@ -201,10 +202,11 @@ function Home() {
     ["06", "International partner", "Bring the Niya model to a market and community you know.", "/partners/", "Partner with Niya"],
   ];
   return <>
-    <section className="hero"><div className="hero-pattern"></div><div className="wrap hero-grid">
-      <div className="hero-copy"><p className="eyebrow light" data-hero>Niya Venture Studio</p><h1 data-hero>Building the <em>Muslim Economy</em>, together.</h1><p className="lede" data-hero>We convene founders, investors and operators to turn ambitious ideas into enduring companies, connections and shared momentum.</p><div className="actions" data-hero><Link className="button" to="/signup/">Join the network</Link><Link className="text-link light" to="/events/">Explore events <span aria-hidden="true">→</span></Link></div></div>
-      <ConnectCard />
+    <section className="hero"><div className="wrap hero-grid">
+      <div className="hero-copy"><p className="eyebrow" data-hero>Our capital. Our founders. Our stage.</p><h1 data-hero>Building the <em>Muslim Economy,</em> together.</h1><p className="lede" data-hero>We bring founders, investors and operators together to build enduring companies and meaningful connections.</p><div className="actions" data-hero><Link className="button" to="/signup/">Join early access <span aria-hidden="true">↗</span></Link><Link className="text-link" to="/events/">Explore events <span aria-hidden="true">→</span></Link></div><Link className="hero-connect-link" to="/connect/" data-hero><span className="status-dot" aria-hidden="true" /><span><strong>Niya Connect</strong> <span>In development · Coming in 2027</span></span><span aria-hidden="true">→</span></Link></div>
+      <figure className="hero-visual" data-hero><img src={summitCommunity} alt="Founders sharing their work at the first Niya Global Startup Summit" width="2200" height="1466" fetchPriority="high" /><figcaption><div><span className="eyebrow">The people behind the possibility</span><p>Ideas meet opportunity.</p></div><Link to="/summit/" aria-label="Explore Edition 1 of the Niya Summit">↗</Link></figcaption></figure>
     </div></section>
+    <section className="company-showcase" aria-labelledby="company-showcase-heading"><div className="wrap"><div className="company-showcase-heading" data-reveal><h2 id="company-showcase-heading">Meet the builders in our ecosystem.</h2><Link className="text-link" to="/portfolio/">Explore their stories <span aria-hidden="true">→</span></Link></div><div className="company-showcase-grid" data-reveal data-reveal-group>{portfolio.map(company => <Link key={company.slug} to={`/portfolio/${company.slug}/`} className="company-showcase-link"><div className="company-showcase-logo"><img src={company.logo} alt={`${company.name} logo`} width="140" height="60" loading="lazy" /></div><span>{company.category}</span><span className="company-showcase-arrow" aria-hidden="true">↗</span></Link>)}</div></div></section>
     <section className="section"><div className="wrap"><div className="section-heading split-heading" data-reveal><div><p className="eyebrow">Start here</p><h2>Who are you?</h2></div><p>Choose the path that best fits your work. We will take you to the most relevant way to participate in Niya.</p></div>
       <div className="audience-grid" data-reveal data-reveal-group>{audiences.map(([n, title, copy, to, cta]) => <Link className="audience-card" to={to} key={n}><span>{n}</span><h3>{title}</h3><p>{copy}</p><b>{cta} →</b></Link>)}</div>
     </div></section>
@@ -231,7 +233,16 @@ function ContentPage({ eyebrow, title, intro, children }) {
 
 function Connect() { return <ConnectPage />; }
 
-function Founders() { return <><PageHero eyebrow="For founders" title="Build with people who understand the opportunity.">Niya brings founders into a network of capital, practical expertise and ecosystem relationships.</PageHero><section className="section"><div className="wrap feature-grid" data-reveal data-reveal-group>{[["01","Build with us","Have a venture idea or a problem worth solving? Tell us what you are building and where you need a partner."],["02","Already building","Connect with a community of operators, investors and potential collaborators through Niya programs and events."],["03","Be visible","Help make the work happening across the ecosystem easier to discover. Early access to Niya Connect begins here."]].map(([n,t,c])=><article className="feature-card" key={n}><span className="icon">{n}</span><h3>{t}</h3><p>{c}</p></article>)}</div></section><section className="section section-cream"><div className="wrap two-col"><div data-reveal><p className="eyebrow">One conversation</p><h2>Start with your context.</h2></div><div data-reveal><p className="lede small">There is no generic pitch portal here. Share your stage, what you are building and the kind of connection that would be helpful. The right next step depends on your situation.</p><Link className="button" to="/signup/">Tell us about your work</Link></div></div></section></>; }
+function Founders() {
+  return <>
+    <PageHero eyebrow="For founders" title="Build with people who understand the opportunity.">Niya brings founders into a network of capital, practical expertise and ecosystem relationships.</PageHero>
+    <section className="section"><div className="wrap founder-paths" data-reveal data-reveal-group>
+      <article className="founder-path"><p className="eyebrow">01 · From the first idea</p><h2>Have a problem worth solving?</h2><p>Tell us what you want to build and where you need a partner. Start a conversation with Niya Studio about your idea and the support that would help you move forward.</p><Link className="button" to="/signup/">Build with us <span aria-hidden="true">↗</span></Link></article>
+      <article className="founder-path"><p className="eyebrow">02 · For the journey ahead</p><h2>Already building something?</h2><p>Meet operators, investors and potential collaborators through Niya programs and events. Find the conversations and practical expertise relevant to your next step.</p><Link className="button" to="/events/">Meet the ecosystem <span aria-hidden="true">↗</span></Link></article>
+    </div></section>
+    <section className="section section-cream"><div className="wrap two-col"><div data-reveal><p className="eyebrow">Make your work visible</p><h2>Your next connection starts with context.</h2></div><div data-reveal><p className="lede small">Niya Connect is in development. Join early access to help shape how founders, investors and ecosystem partners discover each other, and tell us what you are building.</p><Link className="button" to="/connect/">Explore Niya Connect <span aria-hidden="true">↗</span></Link></div></div></section>
+  </>;
+}
 
 function Investors() { return <ContentPage eyebrow="For investors" title="See more of the ecosystem before the first meeting." intro="Niya creates informed points of connection between capital, founders and the people close to emerging markets."><div className="prose" data-reveal><h2>Relationships backed by context.</h2><p>Investors do not need more noise. They need clearer context: who is building, where momentum is forming and which conversations are worth making time for.</p><h3>Ways to participate</h3><ul><li>Join Niya events and meet founders, operators and fellow investors in person.</li><li>Follow the Studio’s portfolio stories as more company detail is published.</li><li>Join the Niya Connect early-access list to help shape future discovery tools.</li></ul></div><SideCard eyebrow="Investor network" title="Tell us your lens." copy="Share your focus, geography and the conversations that matter to you. We will keep your context in mind for relevant opportunities." cta="Join as an investor" /></ContentPage>; }
 
