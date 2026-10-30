@@ -1,73 +1,61 @@
-# Niya Venture Studio — Website
+# Niya Venture Studio website
 
-Static marketing site for **Niya Venture Studio** ("Building the Muslim Economy"):
-a platform connecting founders, investors, and service providers across 7 global regions.
+React marketing site for Niya Venture Studio. It preserves the navy, coral and editorial identity while presenting clear audience paths across clean routes. Vite produces a static `dist/` deployment for Netlify, and Anime.js provides accessible viewport reveals and metric count-ups.
 
-Plain HTML/CSS/JS — no build step, no dependencies beyond Google Fonts (Sora, DM Serif Display).
+## Routes
 
-## Structure
+- `/` — home, six audience paths and Edition 1 recap
+- `/connect/` — Niya Connect early access (pre-launch)
+- `/founders/`, `/investors/`, `/providers/`, `/partners/`
+- `/portfolio/` and starter founder-story pages
+- `/events/`, `/events/halal-money-forum-nj/` (redirect to the official event website), `/summit/`
+- `/summit/agenda/`, `/summit/hackathon/` — Edition 1 program archives
+- `/signup/` — single role-based intake
+- `/news/`, `/thanks/`, plus a React 404 fallback
 
-```
-.
-├── index.html            # All page markup (single page, anchor-nav sections)
-├── css/
-│   └── styles.css        # All styles (design tokens as CSS variables in :root)
-├── js/
-│   └── main.js           # Nav shadow, modals, forms, scroll-reveal
-└── assets/images/
-    ├── logo-niya-sf.jpg
-    ├── team-taqi-hasan.jpg
-    └── team-tanveer-ali.jpg
-```
-
-## Page sections (`index.html`)
-
-| Anchor | Section |
-| --- | --- |
-| `#platform` | Value proposition |
-| *(feature grid)* | Features |
-| `#for-lps` | For limited partners / investors |
-| `#portfolio` | Portfolio |
-| `#segments` | Market segments |
-| `#traction` | Traction |
-| `#team` | Team / about |
-| `#halal-money` | Halal Money Forum |
-| `#join` | Join form |
-| *(events)* | Niya Startup Summit 2026 feature block |
-
-## Run locally
-
-Open `index.html` in a browser, or serve the folder:
+## Local preview
 
 ```bash
-python3 -m http.server 8000
-# → http://localhost:8000
+pnpm install
+pnpm dev
 ```
 
-## Deploy (GitHub Pages)
+Open the local URL printed by Vite, normally `http://127.0.0.1:5173/`.
 
-Repo → **Settings → Pages → Deploy from branch → `main` / root**.
+Create a production build with `pnpm build`, then check it with `pnpm preview`.
 
-## Design tokens
+## Netlify handoff
 
-Defined at the top of `css/styles.css`:
+The checked-in `netlify.toml` sets the build command to `pnpm run build`, the Node runtime to 22, and the publish directory to `dist`. The SPA fallback in `app/public/_redirects` preserves direct access to every clean URL.
 
-`--navy #1F4E79` · `--navy-dark #0D2137` · `--orange #FF6B35` · `--cream #FDF8F2` · `--gold #C9952A` · `--purple #6D5BD0` · `--teal #1D9E75`
+Two Netlify Forms are declared statically in `app/index.html` and rendered as accessible React forms:
 
-## JavaScript behavior (`js/main.js`)
+- `niya-network` — the single Niya intake form; intended recipient: Taqi, `taqi@niyasf.com`.
+- `halal-money-forum-pitchfest` — legacy Pitchfest form definition; intended recipient: Taqi, `taqi@niyasf.com`. The event page currently redirects to the official event site.
 
-- **Nav**: adds a `scrolled` class (shadow) after 40px of scroll.
-- **Waitlist / Design Partner modal** (`openModal('demo' | 'partner')`): one modal, content swapped by type.
-- **Summit registration modal**: builds a `mailto:events@niyasf.com` link with the registrant's details.
-- **Join form** + role buttons (`setJoinRole`): preselects the role dropdown and scrolls to the form.
-- **Scroll reveal**: `IntersectionObserver` adds `.visible` to `.reveal` elements.
-- `Esc` closes any open modal.
+Before publishing, the hosting owner must enable Netlify Forms and add an email
+submission notification for `niya-network` addressed to `taqi@niyasf.com` in the
+site's Netlify form notification settings. Submit a test after deployment and
+verify both the Netlify submission record and receipt in Taqi's inbox.
+The hidden `routing_owner` and `routing_email` fields record the intended recipient;
+they do not configure email delivery. No dashboard notification has been configured
+or verified from this checkout. If the legacy Pitchfest form is re-enabled, give it
+the same notification recipient and test it separately.
 
-## Known limitations
+## Content and launch items still requiring owner input
 
-- The **waitlist, design-partner, and join forms do not submit anywhere** — they only show a success
-  message client-side. Wire them to a backend or form service (Formspree, Netlify Forms, etc.) before relying on them.
-- The summit form relies on the visitor's mail client via `mailto:`.
-- Images are large relative to how they're displayed (logo is 3125×3125 shown at ~40px tall); resizing/compressing
-  them would noticeably improve load time.
-- No favicon or Open Graph / social-share tags.
+- Taqi's review of the researched VePay, HalalWallet and Ummah Unite profiles;
+  company approval and a verified Robert Mallon headshot remain outstanding.
+  Public sources and portrait provenance are documented in `docs/portfolio-sources.md`.
+- November 14 attendance and registration are handled at `https://muslimeconomysummit.org/`.
+- Approved privacy notice, terms, and analytics decision.
+- Hosting owner: activate the prepared `niyasummit.com` redirects after confirming ownership, domain aliases, HTTPS, and DNS. See `docs/summit-migration.md`.
+- Final sourced facts file approval for any new metrics beyond the Summit recap.
+
+## Sources used in the current build
+
+The Edition 1 recap uses only figures verified in **Niya Global Startup Summit 2026 Event Report**: 400+ attendees, 50+ speakers and presenters, 14 live-pitch startups, and 50+ hackathon builders. Approved Summit photography lives in `assets/events/` and is web-optimized.
+
+The historical speaker roster, agenda, hackathon program and partner acknowledgments
+were migrated from the supplied `niya-summit-website.zip` on October 26, 2026.
+Source details, exclusions and redirect handoff are recorded in `docs/summit-migration.md`.

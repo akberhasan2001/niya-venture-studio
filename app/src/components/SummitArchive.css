@@ -1,0 +1,42 @@
+.summit-archive-nav { border-bottom: 1px solid var(--line); background: var(--cream); }
+.summit-archive-nav nav { display: flex; flex-wrap: wrap; gap: 10px 28px; padding-block: 20px; }
+.summit-archive-nav a { font-size: 12px; font-weight: 800; text-decoration: none; padding: 6px 0; }
+.summit-archive-nav a:hover { color: #a83b16; }
+.summit-archive-nav a:focus-visible,.archive-roster-toggle:focus-visible { outline: 2px solid var(--orange); outline-offset: 5px; }
+.summit-archive-section { scroll-margin-top: 145px; }
+.archive-program-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+.archive-program-grid article { padding: 30px; background: white; border: 1px solid var(--line); border-radius: 16px; }
+.archive-program-grid h3 { font: 400 30px/1.15 var(--serif); margin: 22px 0 14px; }
+.archive-program-grid p:not(.eyebrow) { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+.archive-actions { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; margin-top: 32px; }
+.archive-speaker-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.archive-speaker { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; scroll-margin-top: 150px; }
+.archive-speaker img,.archive-speaker-initials { width: 100%; height: auto; aspect-ratio: 1.2; object-fit: cover; object-position: center 25%; background: var(--cream); }
+.archive-speaker-initials { display: grid; place-items: center; font: 400 60px var(--serif); color: var(--navy-2); }
+.archive-speaker > div:not(.archive-speaker-initials) { padding: 22px; }
+.archive-speaker h3 { font: 400 26px/1.2 var(--serif); margin: 0 0 10px; }
+.archive-speaker p { margin: 4px 0; font-size: 12px; line-height: 1.6; color: var(--muted); }
+.archive-speaker .archive-speaker-company { font-weight: 800; color: var(--navy-2); }
+.archive-roster-toggle { margin-top: 32px; cursor: pointer; }
+.archive-organizers { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.archive-organizers article { background: white; padding: 30px; border: 1px solid var(--line); border-radius: 16px; }
+.archive-organizers img,.archive-organizer-wordmark { display: flex; align-items: center; width: 160px; max-width: 100%; height: 80px; object-fit: contain; object-position: left center; font: 400 27px/1.1 var(--serif); }
+.archive-organizers h3 { font-size: 15px; margin: 24px 0 3px; }
+.archive-organizers p { margin: 0; font-size: 12px; color: var(--muted); }
+.archive-partners { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 36px; }
+.archive-partners h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; }
+.archive-partners ul { list-style: none; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.archive-partners li { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border: 1px solid var(--line); border-radius: 100px; font-size: 12px; background: #ffffff90; }
+.archive-partners li img { width: 28px; height: 24px; object-fit: contain; }
+.archive-source { font-size: 11px !important; color: var(--muted); margin-top: 24px; }
+.archive-past-notice { margin-top: 32px; padding: 18px 24px; border-left: 3px solid var(--orange); background: var(--cream); color: var(--muted); font-size: 13px; }
+.archive-past-notice strong { color: var(--navy); }
+.archive-agenda-group { margin-bottom: 60px; }
+.archive-agenda h2 { font-size: clamp(32px,4vw,46px); margin: 0 0 24px; }
+.archive-agenda ol { list-style: none; margin: 0 0 32px; padding: 0; border-top: 1px solid var(--line); }
+.archive-agenda li { display: grid; grid-template-columns: 100px minmax(0,1fr); gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.archive-session-time { font-size: 12px; font-weight: 800; color: var(--navy-2); }
+.archive-agenda h3 { margin: 0; font-size: 15px; line-height: 1.6; }
+.archive-agenda li p { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+@media(max-width:860px) { .archive-program-grid { grid-template-columns: 1fr; } .archive-speaker-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .archive-organizers { grid-template-columns: 1fr; } }
+@media(max-width:560px) { .archive-speaker-grid { gap: 12px; } .archive-speaker > div:not(.archive-speaker-initials) { padding: 14px; } .archive-speaker h3 { font-size: 21px; } .archive-partners { grid-template-columns: 1fr; gap: 12px; } .archive-agenda li { grid-template-columns: 1fr; gap: 8px; } }

@@ -1,0 +1,484 @@
+{
+  "speakers": [
+    {
+      "id": "speaker-junaid-wahedna",
+      "name": "Junaid Wahedna",
+      "role": "Chairman / Founder",
+      "company": "Wahed",
+      "image": "/summit/speakers/junaid-wahedna.webp"
+    },
+    {
+      "id": "speaker-monem-salam",
+      "name": "Monem Salam",
+      "role": "EVP & Portfolio Manager",
+      "company": "Saturna Capital",
+      "image": "/summit/speakers/monem-salam.webp"
+    },
+    {
+      "id": "speaker-irshad-rasheed",
+      "name": "Irshad Rasheed",
+      "role": "President",
+      "company": "Stearns Salaam Bank",
+      "image": "/summit/speakers/irshad-rasheed.webp"
+    },
+    {
+      "id": "speaker-aijaz-hussain",
+      "name": "Aijaz Hussain",
+      "role": "EVP Sales & Director",
+      "company": "UIF Corporation",
+      "image": "/summit/speakers/aijaz-hussain.webp"
+    },
+    {
+      "id": "speaker-omar-munshi",
+      "name": "Umar Munshi",
+      "role": "General Partner",
+      "company": "HASAN VC",
+      "image": "/summit/speakers/omar-munshi.webp"
+    },
+    {
+      "id": "speaker-morrad-irsane",
+      "name": "Morrad Irsane",
+      "role": "CEO & Co-Founder",
+      "company": "Takadao",
+      "image": "/summit/speakers/morrad-irsane.webp"
+    },
+    {
+      "id": "speaker-sharene-lee",
+      "name": "Sharene Lee",
+      "role": "Co-Founder",
+      "company": "Takadao",
+      "image": "/summit/speakers/sharene-lee.webp"
+    },
+    {
+      "id": "speaker-owaiz-dadabhoy",
+      "name": "Owaiz Dadabhoy",
+      "role": "Senior Vice President",
+      "company": "Saturna Capital",
+      "image": "/summit/speakers/owaiz-dadabhoy.webp"
+    },
+    {
+      "id": "speaker-mafaz-jaufer",
+      "name": "Mafaz Jaufer",
+      "role": "CEO & Founder",
+      "company": "VEPAY INC",
+      "image": "/summit/speakers/mafaz-jaufer.webp"
+    },
+    {
+      "id": "speaker-souhail-meftah",
+      "name": "Souhail Meftah",
+      "role": "Co-Founder & CTO",
+      "company": "VEPAY",
+      "image": "/summit/speakers/souhail-meftah.webp"
+    },
+    {
+      "id": "speaker-amber-gerstung",
+      "name": "Amber Gerstung",
+      "role": "Chief Deposit Officer",
+      "company": "Stearns Salaam Bank",
+      "image": "/summit/speakers/amber-gerstung.webp"
+    },
+    {
+      "id": "speaker-anouar-adham",
+      "name": "Anouar Adham",
+      "role": "Founder",
+      "company": "Bayuti",
+      "image": "/summit/speakers/anouar-adham.webp"
+    },
+    {
+      "id": "speaker-zain-jeewanjee",
+      "name": "Zain Jeewanjee",
+      "role": "CEO & Founder",
+      "company": "Insure123 Insurance Agency",
+      "image": "/summit/speakers/zain-jeewanjee.webp"
+    },
+    {
+      "id": "speaker-rayyan-naik",
+      "name": "Rayyan Naik",
+      "role": "Co-Founder & Co-CEO",
+      "company": "Ummah Unite",
+      "image": "/summit/speakers/rayyan-naik-v3.webp"
+    },
+    {
+      "id": "speaker-yasin-amawi",
+      "name": "Yasin Amawi",
+      "role": "Co-Founder & Co-CEO",
+      "company": "Ummah Unite",
+      "image": "/summit/speakers/yasin-amawi.webp"
+    },
+    {
+      "id": "speaker-tabish-hasan",
+      "name": "Tabish Hasan",
+      "role": "Co-Founder & CEO",
+      "company": "Ummah Media Group LLC",
+      "image": "/summit/speakers/tabish-hasan-v1.webp"
+    },
+    {
+      "id": "speaker-taqi-hasan",
+      "name": "Taqi Hasan",
+      "role": "Co-Founder",
+      "company": "Niya Venture Studio",
+      "image": "/summit/speakers/taqi-hasan.webp"
+    },
+    {
+      "id": "speaker-tanveer-ali",
+      "name": "Tanveer Ali",
+      "role": "Founder",
+      "company": "Halal Money Forum",
+      "image": "/summit/speakers/tanveer-ali.webp"
+    },
+    {
+      "id": "speaker-abdullah-ibn-oda",
+      "name": "Abdullah ibn Oda",
+      "role": "Co-Founder / Author",
+      "company": "Bitcoin Majlis",
+      "image": "/summit/speakers/abdullah-ibn-oda.webp"
+    },
+    {
+      "id": "speaker-shakeb-kundiwala",
+      "name": "Shakeb Kundiwala",
+      "role": "Head of Platform Partnerships",
+      "company": "Shariawiz",
+      "image": "/summit/speakers/shakeb-kundiwala.webp"
+    },
+    {
+      "id": "speaker-saad-hazari",
+      "name": "Saad Hazari",
+      "role": "Founder & CEO",
+      "company": "Sarf",
+      "image": "/summit/speakers/saad-hazari.webp"
+    },
+    {
+      "id": "speaker-raza-abidi",
+      "name": "Raza Abidi",
+      "role": "Co-Founder",
+      "company": "Dhow VC",
+      "image": "/summit/speakers/raza-abidi.webp"
+    },
+    {
+      "id": "speaker-souhayl-maronesy",
+      "name": "Souhayl Maronesy",
+      "role": "Founder & CEO",
+      "company": "EdificeX",
+      "image": "/summit/speakers/souhayl-maronesy.webp"
+    },
+    {
+      "id": "speaker-saad-zariff",
+      "name": "Saad Zariff",
+      "role": "Co-Founder",
+      "company": "NAMA Private Wealth",
+      "image": "/summit/speakers/saad-zariff.webp"
+    },
+    {
+      "id": "speaker-ali-farooq",
+      "name": "Ali Farooq",
+      "role": "Co-Founder",
+      "company": "NAMA Private Wealth",
+      "image": "/summit/speakers/ali-farooq.webp"
+    },
+    {
+      "id": "speaker-kyle-natter",
+      "name": "Kyle Natter",
+      "role": "Co-Founder",
+      "company": "Halal Wallet",
+      "image": "/summit/speakers/kyle-natter.webp"
+    },
+    {
+      "id": "speaker-farrukh-siddiqui",
+      "name": "Farrukh Siddiqui",
+      "role": "Founder & CEO",
+      "company": "Defynance",
+      "image": "/summit/speakers/farrukh-siddiqui.webp"
+    },
+    {
+      "id": "speaker-sulaiman-hussaini",
+      "name": "Sulaiman Hussaini",
+      "role": "President",
+      "company": "Ameen Housing",
+      "image": "/summit/speakers/sulaiman-hussaini.webp"
+    },
+    {
+      "id": "speaker-mohammed-nadeem",
+      "name": "Dr. Mohammed Nadeem",
+      "role": "Founder & CEO",
+      "company": "Opulense",
+      "image": "/summit/speakers/mohammed-nadeem.webp"
+    },
+    {
+      "id": "speaker-lamia-yousef",
+      "name": "Dr. Lamia Yousef",
+      "role": "CEO, JazzComputing. Board Director, Stanford GSB-AA",
+      "company": "",
+      "image": "/summit/speakers/lamia-yousef.webp"
+    },
+    {
+      "id": "speaker-amer-haider",
+      "name": "Amer Haider",
+      "role": "Co-founder",
+      "company": "Growing Stronger",
+      "image": "/summit/speakers/amer-haider.webp"
+    },
+    {
+      "id": "speaker-umair-khan",
+      "name": "Umair Khan",
+      "role": "General Partner",
+      "company": "Mentor Fund",
+      "image": "/summit/speakers/umair-khan.webp"
+    },
+    {
+      "id": "speaker-mohammed-nadeem-pm",
+      "name": "Dr. Mohammed Nadeem",
+      "role": "Professional Faculty",
+      "company": "UC Berkeley Haas",
+      "image": "/summit/speakers/mohammed-nadeem.webp"
+    },
+    {
+      "id": "speaker-vaseem-anjum",
+      "name": "Vaseem Anjum",
+      "role": "CEO",
+      "company": "Innowi",
+      "image": "/summit/speakers/vaseem-anjum.webp"
+    },
+    {
+      "id": "speaker-faysal-sohail",
+      "name": "Faysal Sohail",
+      "role": "Managing General Partner",
+      "company": "Presidio Partners",
+      "image": "/summit/speakers/faysal-sohail.webp"
+    },
+    {
+      "id": "speaker-nur-hamdan",
+      "name": "Dr. Nur Hamdan",
+      "role": "Product Head",
+      "company": "Aixplain",
+      "image": "/summit/speakers/nur-hamdan.webp"
+    },
+    {
+      "id": "speaker-mohamed-mohamed",
+      "name": "Dr. Mohamed Mohamed",
+      "role": "Director",
+      "company": "Apple",
+      "image": "/summit/speakers/mohamed-mohamed.webp"
+    },
+    {
+      "id": "speaker-alaa-yousef",
+      "name": "Dr. Alaa Yousef",
+      "role": "Sr. Staff Generative AI Data Scientist",
+      "company": "Cotiviti",
+      "image": "/summit/speakers/alaa-yousef.webp"
+    },
+    {
+      "id": "speaker-saad-godil",
+      "name": "Saad Godil",
+      "role": "Co-founder & CTO",
+      "company": "Hippocratic AI",
+      "image": "/summit/speakers/saad-godil.webp"
+    },
+    {
+      "id": "speaker-ahmed-reza",
+      "name": "Ahmed Reza",
+      "role": "Founder & CEO",
+      "company": "Yobi",
+      "image": "/summit/speakers/ahmed-reza.webp"
+    },
+    {
+      "id": "speaker-noha-rizq",
+      "name": "Noha Rizq",
+      "role": "Chief Marketing Officer",
+      "company": "Incorta",
+      "image": "/summit/speakers/noha-rizq.webp"
+    },
+    {
+      "id": "speaker-razi-mohyeldin",
+      "name": "Razi Mohyeldin",
+      "role": "Managing Partner",
+      "company": "Souq Capital",
+      "image": "/summit/speakers/razi-mohyeldin.webp"
+    },
+    {
+      "id": "speaker-ahmed-rushdi",
+      "name": "Dr. Ahmed Rushdi",
+      "role": "Director",
+      "company": "AI Industry Programs",
+      "image": "/summit/speakers/ahmed-rushdi.webp"
+    },
+    {
+      "id": "speaker-amr-mohsen",
+      "name": "Dr. Amr Mohsen",
+      "role": "Founder",
+      "company": "SVEC",
+      "image": "/summit/speakers/amr-mohsen.webp"
+    }
+  ],
+  "sessions": [
+    {
+      "time": "8:45",
+      "title": "Welcome note",
+      "detail": "Tanveer Ali, Co-Founder, Niya Venture Studio & Founder, Halal Money Forum"
+    },
+    {
+      "time": "8:55",
+      "title": "The $1 Trillion Unlock: How Muslim Founders in the West Are Building an Economy the World Has Never Seen",
+      "detail": "Featuring — Kyle Natter, Co-Founder (HalalWallet), Souhail Meftah, Co-Founder (VePay), Abed Awad, Founder (Shariawiz), Tabish Hasan, Co-Founder & CEO (Ummah Media Group LLC), Adil Faisal, Founder (Caravan Funds), Rayyan Naik & Yasin Amawi, Co-Founders (Ummah Unite)"
+    },
+    {
+      "time": "9:15",
+      "title": "The Pioneers — Who Developed the Halal Economy in the West",
+      "detail": "Recognizing — Papa Ndiaye (Saturna Capital), Irshad Rasheed (Stearns Salaam Bank), Aijaz Hussain (UIF), Zain Jeewanjee (123Insure.com), Ali Malik (Halal Fest & Private Equity), Sulaiman Hussaini (Ameen Housing)"
+    },
+    {
+      "time": "9:35",
+      "title": "Faith, Innovation, and Capital: How Muslim Founders and Sharia-Compliant Investors Can Redesign Finance for the Next Generation",
+      "detail": "Featured talk — Monem Salam, EVP & Portfolio Manager, Saturna Capital / Amana Funds"
+    },
+    {
+      "time": "9:50",
+      "title": "From Overlooked to Oversubscribed: Why Institutional Capital and the Muslim Diaspora Can't Afford to Miss This Moment",
+      "detail": "Umar Munshi, General Partner, HASAN VC · Raza Abidi, Co-Founder, Dhow VC"
+    },
+    {
+      "time": "10:10",
+      "title": "Unmet Demand in the American Muslim Economy: Focus on Finance, FinTech & Investment",
+      "detail": "Building resilient mainstream companies by first sandboxing in the Muslim ecosystem — Irshad Rasheed, President, Stearns Salaam Bank · Monem Salam, Saturna Capital · Aijaz Hussain, UIF"
+    },
+    {
+      "time": "10:25",
+      "title": "The Great Debate: Building for the Ummah vs. Building for the World",
+      "detail": "Rayyan Naik, Co-Founder, Ummah Unite · vs. TBD"
+    },
+    {
+      "time": "11:10",
+      "title": "Beyond Banking: Building the Financial Infrastructure Behind the Muslim Innovation Economy",
+      "detail": "Amber Gerstung, Chief Deposit Officer, Stearns Salaam Bank — lessons from Silicon Valley and the future of values-based banking"
+    },
+    {
+      "time": "11:25",
+      "title": "From Pakistan to the World — A Fireside Chat with Hassan Khan, Founder & CEO, Zyp Technologies",
+      "detail": "Pakistan-based electric mobility startup, backed by Shorooq Partners & Indus Valley Capital — moderated by Taqi Hasan, Co-Founder, Niya Venture Studio"
+    },
+    {
+      "time": "11:45",
+      "title": "Trends & Business Landscape for Investments in the Middle East & Africa",
+      "detail": "Ahmed El Alfi, Chairman, Sawari Ventures — fireside chat hosted by Dr. Amr Mohsen, Silicon Valley Entrepreneurship Club"
+    },
+    {
+      "time": "12:05",
+      "title": "Niya Connect — platform vision and showcase",
+      "detail": "Taqi Hasan, Co-Founder, Niya Venture Studio. Historical program entry; Niya Connect remains pre-launch."
+    },
+    {
+      "time": "12:20",
+      "title": "8 Years to the First Billion, 13 Months to the Second — The Wahed Success Story",
+      "detail": "Junaid Wahedna, Founder & Chairman, Wahed"
+    },
+    {
+      "time": "2:00",
+      "title": "Welcome & introduction to SVEC",
+      "detail": "Dr. Amr Mohsen, Chairman & CEO, Silicon Valley Entrepreneurship Club"
+    },
+    {
+      "time": "2:15",
+      "title": "How Agentic AI Is Reshaping Work, Value Chains, and Labor Economics",
+      "detail": "Dr. Lamia Yousef, CEO, JazzComputing & Board Director, Stanford GSB-AA"
+    },
+    {
+      "time": "2:30",
+      "title": "Recent Trends of Business Landscape and Venture Investments in the Agentic AI Era",
+      "detail": "Fireside — Umair Khan, General Partner, Mentors Fund · moderated by Dr. Amr Mohsen"
+    },
+    {
+      "time": "2:45",
+      "title": "Creative Startup Examples",
+      "detail": "Javed Khan, President, Safeeon & Jeskell, Inc. · Dr. James H. Faghmous, AI Coach · moderated by Kamran Khan, SVEC Secretary General"
+    },
+    {
+      "time": "3:00",
+      "title": "Latest AI Agentic Tools to Accelerate and Validate Your Business from Ideation to Launch",
+      "detail": "Dr. Mohamed Mohamed, Apple Product Lead · Umar Sear, AI Coach & Forward President, Mountain House Muslim Association"
+    },
+    {
+      "time": "3:15",
+      "title": "Agentic AI Platforms and Infrastructures",
+      "detail": "Amin Ahmed, Founder & CEO, Pair Systems · Vaseem Anjum, CEO, Innowi · Dr. Nur Hamdan, Product Head, Aixplain · moderated by Dr. Alaa Yousef, Sr. Staff Generative AI Data Scientist, Cotiviti"
+    },
+    {
+      "time": "3:35",
+      "title": "Running Your Business with AI Agents",
+      "detail": "Ahmed Reza, Founder & CEO, Yobi"
+    },
+    {
+      "time": "3:45",
+      "title": "How AI Is Reshaping Career Paths — What Professionals Need to Know Now",
+      "detail": "Razi Mohyeldin, Managing Partner, Souq Capital"
+    },
+    {
+      "time": "3:55",
+      "title": "Agentic AI in Healthcare",
+      "detail": "Amer Haider, Co-Founder, Growing Stronger · Saad Godil, Co-Founder & CTO, Hippocratic AI · Dr. Alaa Yousef, Sr. Staff Generative AI Data Scientist, Cotiviti"
+    },
+    {
+      "time": "4:10",
+      "title": "Agentic and GPT AI's Impact on Continuing Education, Ethics, and Governance",
+      "detail": "Dr. Ahmed Rushdi, Director, AI Industry Programs · Noha Rizq, Chief Marketing Officer, Incorta"
+    },
+    {
+      "time": "4:25",
+      "title": "How Leaders Create Value AI Cannot Clone",
+      "detail": "Dr. Mohammed Nadeem, Professional Faculty, UC Berkeley Haas · Founder & Managing Partner, Opulence"
+    },
+    {
+      "time": "4:35",
+      "title": "Islamic Views on the Impact of Agentic AI and GPT Technologies",
+      "detail": "Sheikh Alaa El Bakri, Founder & CEO, Tawasaw Institute"
+    },
+    {
+      "time": "5:10",
+      "title": "Muslim Economy Startup Pitch Competition — Pitching Fest",
+      "detail": "Startup pitches before a panel of judges; moderated by Dr. Mostafa Naguib Abdallah, Principal Engineer, Intel Corporation."
+    },
+    {
+      "time": "5:45",
+      "title": "Hackathon Pitch Finals",
+      "detail": "Pitches of hackathon contests with a panel of experienced judges · moderated by Dr. Alaa Yousef, Sr. Staff Generative AI Data Scientist, Cotiviti"
+    },
+    {
+      "time": "Lovelace",
+      "title": "Ameen Housing",
+      "detail": "Room on the left side of the check-in desks, facing the check-in desk"
+    },
+    {
+      "time": "Hopper",
+      "title": "The Promises and Perils of AI Transformation",
+      "detail": "Haseeb Chowdhry, Principal, Trivium Global — first conference room in the Grand Halls, past the dining area"
+    },
+    {
+      "time": "Atanasoff",
+      "title": "Human in the Lead in the Age of AI Intelligence",
+      "detail": "Dr. Omar Clark Fisher, CEO, AbundanceLearning.com & Founder, Genius PAL — second conference room in the Grand Halls, past the dining area"
+    },
+    {
+      "time": "Von Neumann",
+      "title": "Bitcoin: A Future Beyond Fiat Currency and Achieving Digital Sovereignty (double session)",
+      "detail": "Abdullah bin Oda, Founder, Bitcoin Majlis — third conference room in the Grand Halls, past the dining area"
+    },
+    {
+      "time": "Lovelace",
+      "title": "Human Premium in the Age of AI",
+      "detail": "Dr. Mohammed Nadeem, Founder, Opulense & author of The Unclonable CEO · Dr. Omar Fisher, CEO, AbundanceLearning.com & international bestselling author · Reshma Haider, Founder, MASRIF & StyleMeAi"
+    },
+    {
+      "time": "CEO Breakout",
+      "title": "CEO Breakout",
+      "detail": "Closed-door discussion for founders & CEOs"
+    },
+    {
+      "time": "Networking",
+      "title": "Open Networking",
+      "detail": "Connect with founders, investors & builders across the floor"
+    },
+    {
+      "time": "Expo Floor",
+      "title": "Expo Floor",
+      "detail": "Browse the expo floor"
+    }
+  ]
+}
