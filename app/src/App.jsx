@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 import { Link, NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import logo from "../../assets/brand/niya-logo.webp";
-import taqiPhoto from "../../team-taqi-hasan.jpg";
+import taqiPhoto from "../../assets/brand/taqi-hasan.webp";
+import ThemeControl from "./components/ThemeControl.jsx";
 import tanveerPhoto from "../../team-tanveer-ali.jpg";
 import summitRecap from "../../assets/events/summit-edition-one-recap.jpg";
 import summitCommunity from "../../assets/events/summit-community.jpg";
@@ -150,6 +151,7 @@ function Header() {
         <NavLink to="/connect/">Niya Connect</NavLink><NavLink to="/portfolio/">Studio</NavLink><NavLink to="/events/">Events</NavLink>
         <NavLink to="/news/">News</NavLink><Link to="/#about">About</Link><NavLink className="button button-small" to="/signup/">Join Niya <span aria-hidden="true">→</span></NavLink>
       </div>
+      <ThemeControl />
     </nav>
   </header>;
 }

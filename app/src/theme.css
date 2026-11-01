@@ -1,0 +1,25 @@
+:root { color-scheme: light; --surface: #fff; }
+.theme-control { flex-shrink: 0; }
+.theme-control select { min-height: 44px; max-width: 100px; padding: 8px; border: 1px solid var(--line); border-radius: 100px; background: var(--paper); color: var(--ink); font: 700 12px var(--sans); cursor: pointer; }
+.theme-control select:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; }
+html[data-theme="dark"] { color-scheme: dark; --paper: #101923; --cream: #172330; --surface: #1c2b3a; --ink: #edf1f5; --muted: #b4c1cf; --line: #ffffff26; --navy-2: #9dc6ee; --accent-ink: #ffad8b; }
+html[data-theme="dark"] body { background: var(--paper); }
+html[data-theme="dark"] :is(.site-header,.site-header.is-scrolled) { background: #101923f5; }
+html[data-theme="dark"] :is(.brand-wordmark,.site-nav .nav-links > a:not(.button),.menu-button,.hero,.page-hero,.metric-grid dt,.text-link,.company-showcase-arrow,.pavilion-deadline,.quote,.page-hero .text-link.light) { color: var(--ink); }
+html[data-theme="dark"] :is(.company-showcase,.audience-grid .audience-card,.feature-card,.portfolio-card,.connect-pillar,.pavilion-card,.company-founder,.archive-program-grid article,.archive-organizers article,.summit-preview,.hero-note) { background: var(--surface); }
+html[data-theme="dark"] :is(.wm-connect.hero-note,.wm-media-card:not(.wm-overlay-card)) { background: var(--surface); }
+html[data-theme="dark"] :is(.wm-tabs button[aria-selected="true"],.archive-partners li) { background: var(--surface); color: var(--ink); }
+html[data-theme="dark"] .wm-badge { color: #ffc1a6; }
+html[data-theme="dark"] .button-outline { color: var(--ink); border-color: var(--muted); }
+html[data-theme="dark"] .button:not(.button-outline) { background: #ffad8b; border-color: #ffad8b; color: #15202c; }
+html[data-theme="dark"] .button:not(.button-outline):is(:hover,:focus) { background: #ffc4aa; border-color: #ffc4aa; }
+html[data-theme="dark"] .offering-row:is(:hover,:focus-visible) { background: #ffffff08; }
+html[data-theme="dark"] .audience-grid .audience-card:is(:hover,:focus-visible) { background: #253e55; border-color: #7c9bb7; }
+html[data-theme="dark"] .field :is(input,select,textarea) { background: var(--paper); color: var(--ink); }
+html[data-theme="dark"] .notice { background: #34271e; }
+html[data-theme="dark"] .founder-path:last-child .button { color: var(--ink); border-color: var(--muted); }
+html[data-theme="dark"] .founder-path:last-child .button:hover { background: var(--surface); }
+html[data-theme="dark"] .brand img { background: white; border-radius: 6px; }
+html[data-theme="dark"] .company-showcase-logo { background: white; border-radius: 4px; padding: 5px; }
+html[data-theme="dark"] ::selection { background: #875038; color: white; }
+@media(max-width:860px) { .theme-control { margin-left: auto; } .menu-button { order: 3; } .site-nav { gap: 12px; } }
