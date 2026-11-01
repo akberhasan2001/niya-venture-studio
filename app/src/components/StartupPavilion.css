@@ -1,0 +1,10 @@
+.pavilion-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.pavilion-card { display: flex; flex-direction: column; align-items: flex-start; padding: 34px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+.pavilion-card h3 { font: 400 clamp(29px,3vw,39px)/1.12 var(--serif); margin: 14px 0 20px; max-width: 360px; }
+.pavilion-card > p:not(.eyebrow) { font-size: 14px; line-height: 1.75; color: var(--muted); }
+.pavilion-card .pavilion-deadline { color: var(--navy); font-weight: 700; margin: auto 0 24px; padding-top: 15px; }
+.pavilion-card .pavilion-pending { margin: 0; min-height: 48px; display: flex; align-items: center; color: var(--muted); font-size: 12px; }
+.pavilion-official { margin: 30px 0 0; }
+.metric-qualifier { display: block; margin-bottom: 6px; font: 700 11px/1.4 var(--sans); color: var(--muted); }
+.wrap.summit-next-event { margin-block: 26px; }
+@media(max-width:620px) { .pavilion-grid { grid-template-columns: 1fr; } .pavilion-card { padding: 27px; } }

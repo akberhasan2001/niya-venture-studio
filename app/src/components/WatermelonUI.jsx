@@ -2,6 +2,7 @@
 // Source and license: THIRD_PARTY_NOTICES.md.
 import { useId, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { muslimEconomySummit as event, summitAttendance } from "../data/events.js";
 
 export function StatusBadge({ children, muted = false }) {
   return <span className={`wm-badge${muted ? " wm-badge-muted" : ""}`}><span aria-hidden="true" />{children}</span>;
@@ -12,7 +13,7 @@ export function ConnectCard() {
     <div className="wm-connect-top"><StatusBadge>In development</StatusBadge><span className="wm-orbit-mark" aria-hidden="true">↗</span></div>
     <p className="eyebrow">Coming in 2027</p><h2>Niya Connect</h2>
     <p>We’re building market intelligence for founders, investors and ecosystem partners, starting with the global Muslim economy.</p>
-    <div className="wm-card-footer"><Link className="wm-action" to="/connect/">Explore early access <span aria-hidden="true">↗</span></Link></div>
+    <div className="wm-card-footer"><Link className="wm-action" to="/connect/">Explore early access <span aria-hidden="true">→</span></Link></div>
   </aside>;
 }
 
@@ -21,7 +22,7 @@ export function MediaCard({ image, alt, badge, eyebrow, title, children, to, cta
   return <article className={`wm-media-card${overlay ? " wm-overlay-card" : ""}`}>
     {image && <div className="wm-card-image"><img src={image} alt={alt} loading="lazy" /></div>}
     <div className="wm-card-body"><StatusBadge muted={overlay}>{badge}</StatusBadge><p className="wm-card-meta">{eyebrow}</p><h2>{title}</h2><p className="wm-card-description">{children}</p>
-      <div className="wm-card-footer">{external ? <a className="wm-action" href={to}>{cta}<span aria-hidden="true">↗</span></a> : <Link className="wm-action" to={to}>{cta}<span aria-hidden="true">↗</span></Link>}</div>
+      <div className="wm-card-footer">{external ? <a className="wm-action" href={to}>{cta}<span aria-hidden="true">↗</span></a> : <Link className="wm-action" to={to}>{cta}<span aria-hidden="true">→</span></Link>}</div>
     </div>
   </article>;
 }
@@ -48,8 +49,8 @@ export function EventBrowser({ communityImage }) {
       <div className="wm-tabs" role="tablist" aria-label="Filter events">{filters.map((filter, index) => <button key={filter.value} ref={el => { buttons.current[index] = el; }} id={`${id}-${filter.value}`} type="button" role="tab" aria-selected={selected === filter.value} aria-controls={`${id}-panel`} tabIndex={selected === filter.value ? 0 : -1} onClick={() => setSelected(filter.value)} onKeyDown={event => handleKey(event, index)}>{filter.label}</button>)}</div>
     </div>
     <div id={`${id}-panel`} role="tabpanel" aria-labelledby={`${id}-${selected}`} tabIndex={0} className="wm-event-grid">
-      {selected !== "past" && <MediaCard badge="Upcoming event" eyebrow="New Jersey · November 14, 2026" title="Halal Money Forum" to="https://muslimeconomysummit.org/" cta="Visit the official event website">Join the conversation around capital, founders and the future of the global Muslim economy. Find the latest program, registration and participation information on the official event website.</MediaCard>}
-      {selected !== "upcoming" && <MediaCard overlay image={communityImage} alt="Speakers at the 2026 Niya Global Startup Summit" badge="Edition 1 · Recap" eyebrow="Silicon Valley · August 29, 2026" title="Niya Global Startup Summit" to="/summit/" cta="Relive Edition 1">400+ attendees. One shared ambition. Revisit a full day of conversations, live pitches, a hackathon and an expo.</MediaCard>}
+      {selected !== "past" && <MediaCard badge="Upcoming event" eyebrow={`${event.location} · ${event.date}`} title={event.name} to={event.website} cta="Visit the official event website">Join the conversation around capital, founders and the future of the global Muslim economy. Explore the Startup Pavilion below, or visit the official website for the latest program and attendee registration.</MediaCard>}
+      {selected !== "upcoming" && <MediaCard overlay image={communityImage} alt="Speakers at the 2026 Niya Global Startup Summit" badge="Edition 1 · Recap" eyebrow="Silicon Valley · August 29, 2026" title="Niya Global Startup Summit" to="/summit/" cta="Relive Edition 1">A sold-out gathering of {summitAttendance} attendees. Revisit a full day of conversations, live pitches, a hackathon and an expo.</MediaCard>}
     </div>
   </div>;
 }

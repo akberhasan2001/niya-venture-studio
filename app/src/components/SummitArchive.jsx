@@ -9,7 +9,7 @@ const partnerLogos = { "Ummah Unite": "ummah_unite.webp", "Halal Wallet": "halal
 const featuredIds = ["speaker-junaid-wahedna", "speaker-monem-salam", "speaker-irshad-rasheed", "speaker-mafaz-jaufer", "speaker-lamia-yousef", "speaker-amr-mohsen"];
 
 export function SummitArchiveNav() {
-  return <div className="summit-archive-nav"><nav className="wrap" aria-label="Summit archive navigation"><a href="#summit-gallery-heading">Photos</a><a href="#program">Program</a><a href="#speakers">Speakers</a><a href="#partners">Organizers & partners</a><Link to="/summit/agenda/">Full agenda ↗</Link><Link to="/summit/hackathon/">Hackathon ↗</Link></nav></div>;
+  return <div className="summit-archive-nav"><nav className="wrap" aria-label="Summit archive navigation"><a href="#summit-gallery-heading">Photos</a><a href="#program">Program</a><a href="#speakers">Speakers</a><a href="#partners">Organizers & partners</a><Link to="/summit/agenda/">Full agenda →</Link><Link to="/summit/hackathon/">Hackathon →</Link></nav></div>;
 }
 
 function SpeakerCard({ person }) {
