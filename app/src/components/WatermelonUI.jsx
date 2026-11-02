@@ -2,7 +2,7 @@
 // Source and license: THIRD_PARTY_NOTICES.md.
 import { useId, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { muslimEconomySummit as event, summitAttendance } from "../data/events.js";
+import { muslimEconomySummit as event, summitAttendance, londonSummit } from "../data/events.js";
 
 export function StatusBadge({ children, muted = false }) {
   return <span className={`wm-badge${muted ? " wm-badge-muted" : ""}`}><span aria-hidden="true" />{children}</span>;
@@ -51,6 +51,7 @@ export function EventBrowser({ communityImage }) {
     <div id={`${id}-panel`} role="tabpanel" aria-labelledby={`${id}-${selected}`} tabIndex={0} className="wm-event-grid">
       {selected !== "past" && <MediaCard badge="Upcoming event" eyebrow={`${event.location} · ${event.date}`} title={event.name} to={event.website} cta="Visit the official event website">Join the conversation around capital, founders and the future of the global Muslim economy. Explore the Startup Pavilion below, or visit the official website for the latest program and attendee registration.</MediaCard>}
       {selected !== "upcoming" && <MediaCard overlay image={communityImage} alt="Speakers at the 2026 Niya Global Startup Summit" badge="Edition 1 · Recap" eyebrow="Silicon Valley · August 29, 2026" title="Niya Global Startup Summit" to="/summit/" cta="Relive Edition 1">A sold-out gathering of {summitAttendance} attendees. Revisit a full day of conversations, live pitches, a hackathon and an expo.</MediaCard>}
+      {selected !== "past" && <MediaCard badge={londonSummit.status} eyebrow="London · April 2027" title={londonSummit.name} to={londonSummit.signup} cta="Sign up for updates">{londonSummit.description}</MediaCard>}
     </div>
   </div>;
 }
