@@ -5,7 +5,7 @@ Prepared October 31, 2026. Code is on `feature/niya-multipage-relaunch`. No depl
 ## Code ready for review
 
 - The November 14 event is named **Muslim Economy Summit**, at NJIT Campus, Newark, New Jersey. `/events/#startup-pavilion` has a free Startup Battlefield pitch application closing November 9 and an exhibitor deadline of November 10. The application opens `https://forms.gle/i3mKBTMrHsetRPRL8`.
-- The exhibitor URL is intentionally unset. Put the organizer's final URL in `exhibitorRegistration` in `app/src/data/events.js` when supplied; the component will then display its registration button. It currently says the link is coming soon.
+- November 2 update: the exhibitor URL is `https://forms.gle/iqWWhgLS9QGRmXdw8`, configured in `exhibitorRegistration`. The Startup Pavilion displays “Reserve a Table”.
 - The homepage Startup card leads to the Pavilion. The Edition 1 recap has a top link to the November 14 official site.
 - Signup's internal launch note has been replaced with a privacy notice and legal links. The role option now says Startup. Footer links lead to `/privacy/` and `/terms/`.
 - The supplied privacy/terms text is included, with the analytics placeholder resolved from observed production services: Cloudflare's beacon is present. Microsoft 365 is retained from the supplied draft and needs the owner's confirmation.
@@ -17,8 +17,8 @@ Prepared October 31, 2026. Code is on `feature/niya-multipage-relaunch`. No depl
 
 1. In `app/src/components/LegalPages.jsx`, replace `effectiveDate` with the actual publication date and `mailingAddress = null` with the company address once the supervisor supplies it. No fictional address or bracketed editing notes are shown publicly.
 2. Confirm the email provider is Microsoft 365 and the privacy text matches the deployed services. The Cloudflare Web Analytics disclosure reflects the current live beacon; recheck if hosting settings change.
-3. Obtain the exhibitor registration link. Do not reuse the pitch application or general attendee link as an exhibitor registration URL.
-4. London April 2027 was not added: the Event Report describes it as planned, with details still being finalized, and this review asks for it only if confirmed. The optional `/portfolio/` → `/companies/` migration is not part of these launch fixes.
+3. London is now listed as “London, April 2027 (date to be announced)”, explicitly tentative and planned, with a signup link for updates. Replace the tentative wording only once the organizer confirms the date.
+4. The optional `/portfolio/` → `/companies/` migration is not part of these launch fixes.
 
 ## Netlify colleague — deployment and email delivery
 
