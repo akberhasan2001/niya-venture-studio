@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./LegalPages.css";
 
-// Set the calendar date at publication and the mailing address after owner confirmation.
-const effectiveDate = "Effective on publication";
+// Planned go-live date; update this if production publication moves to another day.
+const effectiveDate = "Effective November 5, 2026";
+// Contact is by email; the owner has requested that no mailing address be shown.
 const mailingAddress = null;
 
 function LegalLayout({ title, children }) {

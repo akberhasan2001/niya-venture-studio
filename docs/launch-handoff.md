@@ -4,7 +4,7 @@ Prepared October 31, 2026. Code is on `feature/niya-multipage-relaunch`. No depl
 
 ## Code ready for review
 
-- The November 14 event is named **Muslim Economy Summit**, at NJIT Campus, Newark, New Jersey. `/events/#startup-pavilion` has a free Startup Battlefield pitch application closing November 9 and an exhibitor deadline of November 10. The application opens `https://forms.gle/i3mKBTMrHsetRPRL8`.
+- The November 14 event is named **Muslim Economy Summit**, at NJIT Campus, Newark, New Jersey. `/events/#startup-pavilion` has a free Startup Battlefield pitch application closing November 9 and an exhibitor deadline of November 10. The application opens `https://forms.gle/ymrdGD3MpoJCqKdN7` (updated November 5).
 - November 2 update: the exhibitor URL is `https://forms.gle/iqWWhgLS9QGRmXdw8`, configured in `exhibitorRegistration`. The Startup Pavilion displays “Reserve a Table”.
 - The homepage Startup card leads to the Pavilion. The Edition 1 recap has a top link to the November 14 official site.
 - Signup's internal launch note has been replaced with a privacy notice and legal links. The role option now says Startup. Footer links lead to `/privacy/` and `/terms/`.
@@ -15,7 +15,7 @@ Prepared October 31, 2026. Code is on `feature/niya-multipage-relaunch`. No depl
 
 ## Items to finish before publication
 
-1. In `app/src/components/LegalPages.jsx`, replace `effectiveDate` with the actual publication date and `mailingAddress = null` with the company address once the supervisor supplies it. No fictional address or bracketed editing notes are shown publicly.
+1. Privacy and Terms use `info@niyasf.com` as the contact email. The owner has confirmed that the mailing address should remain omitted. The effective date is November 5, 2026 for the planned go-live today; update it to the actual go-live date if publication moves to another day.
 2. Confirm the email provider is Microsoft 365 and the privacy text matches the deployed services. The Cloudflare Web Analytics disclosure reflects the current live beacon; recheck if hosting settings change.
 3. London is now listed as “London, April 2027 (date to be announced)”, explicitly tentative and planned, with a signup link for updates. Replace the tentative wording only once the organizer confirms the date.
 4. The optional `/portfolio/` → `/companies/` migration is not part of these launch fixes.

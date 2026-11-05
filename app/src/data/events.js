@@ -3,7 +3,7 @@ export const muslimEconomySummit = {
   date: "November 14, 2026",
   location: "NJIT Campus · Newark, New Jersey",
   website: "https://muslimeconomysummit.org/",
-  pitchApplication: "https://forms.gle/i3mKBTMrHsetRPRL8",
+  pitchApplication: "https://forms.gle/ymrdGD3MpoJCqKdN7",
   pitchDeadline: "November 9, 2026",
   exhibitorDeadline: "November 10, 2026",
   exhibitorRegistration: "https://forms.gle/iqWWhgLS9QGRmXdw8",

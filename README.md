@@ -53,10 +53,12 @@ running Vite alone omits that step. React continues to handle navigation.
   company approval and a verified Robert Mallon headshot remain outstanding.
   Public sources and portrait provenance are documented in `docs/portfolio-sources.md`.
 - November 14 attendance and registration are handled at `https://muslimeconomysummit.org/`.
-- Confirm the legal publication date, company mailing address, and Microsoft 365
-  provider detail in `app/src/components/LegalPages.jsx`. The supplied policy and
+- Legal pages use `info@niyasf.com` and omit the mailing address as requested.
+  The effective date is November 5, 2026 for the planned go-live; revise it if
+  publication moves. Confirm the Microsoft 365 provider detail in
+  `app/src/components/LegalPages.jsx`. The supplied policy and
   terms are included; the analytics disclosure names the observed Cloudflare beacon.
-- Supply the official exhibitor URL in `app/src/data/events.js`.
+- Official pitch and exhibitor URLs are configured in `app/src/data/events.js`.
 - Hosting owner: activate the prepared `niyasummit.com` redirects after confirming ownership, domain aliases, HTTPS, and DNS. See `docs/summit-migration.md`.
 - Final sourced facts file approval for any new metrics beyond the Summit recap.
 
