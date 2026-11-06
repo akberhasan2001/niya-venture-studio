@@ -3,23 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        let preference = "system";
+        try { const saved = localStorage.getItem("niya-theme"); if (["light", "dark", "system"].includes(saved)) preference = saved; } catch {}
+        document.documentElement.dataset.themePreference = preference;
+        document.documentElement.dataset.theme = preference === "system" ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light") : preference;
+      })();
+    </script>
+    <!-- site-meta:start -->
+    <title>Niya Venture Studio | Building the Muslim Economy</title>
     <meta name="description" content="Niya Venture Studio brings founders, capital and communities together to build the global Muslim economy." />
     <link rel="canonical" href="https://niyasf.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Niya Venture Studio" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Niya Venture Studio | Building the Muslim Economy" />
+    <meta property="og:description" content="Niya Venture Studio brings founders, capital and communities together to build the global Muslim economy." />
+    <meta property="og:url" content="https://niyasf.com/" />
+    <meta property="og:image" content="https://niyasf.com/social/niya-preview.png" />
+    <meta property="og:image:secure_url" content="https://niyasf.com/social/niya-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Niya Venture Studio — Building the Muslim Economy, together." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Niya Venture Studio | Building the Muslim Economy" />
+    <meta name="twitter:description" content="Niya Venture Studio brings founders, capital and communities together to build the global Muslim economy." />
+    <meta name="twitter:image" content="https://niyasf.com/social/niya-preview.png" />
+    <meta name="twitter:image:alt" content="Niya Venture Studio — Building the Muslim Economy, together." />
+    <!-- site-meta:end -->
+    <meta name="theme-color" content="#0d2137" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <title>Niya Venture Studio | Building the Muslim Economy</title>
   </head>
   <body>
     <div id="root"></div>
-    <form name="niya-network" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input name="form-name" value="niya-network" />
-      <input name="bot-field" /><input name="routing_owner" /><input name="routing_email" /><input name="name" /><input name="email" />
+    <form name="niya-network" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="niya-network" />
+      <input name="bot-field" /><input type="hidden" name="routing_owner" value="Taqi" /><input type="hidden" name="routing_email" value="taqi@niyasf.com" /><input name="name" /><input name="email" type="email" />
       <select name="role"><option>Founder</option></select><input name="organization" /><textarea name="interest"></textarea>
-    </form>
-    <form name="halal-money-forum-pitchfest" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input name="form-name" value="halal-money-forum-pitchfest" />
-      <input name="bot-field" /><input name="routing_owner" /><input name="routing_email" /><input name="name" /><input name="email" /><input name="company" /><textarea name="pitch"></textarea>
     </form>
     <script type="module" src="/src/main.jsx"></script>
   </body>

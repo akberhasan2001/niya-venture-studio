@@ -6,7 +6,8 @@
   "packageManager": "pnpm@11.25.0",
   "scripts": {
     "dev": "vite --config vite.config.js",
-    "build": "vite build --config vite.config.js",
+    "build": "vite build --config vite.config.js && node scripts/build-page-meta.mjs",
+    "check:build": "node scripts/verify-build.mjs",
     "preview": "vite preview --config vite.config.js"
   },
   "dependencies": {

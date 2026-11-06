@@ -1,0 +1,10 @@
+.legal-layout { display: grid; grid-template-columns: 200px minmax(0,720px); gap: 70px; }
+.legal-nav { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; font-size: 12px; font-weight: 700; }
+.prose.legal-copy h2 { font-size: 30px; line-height: 1.2; margin: 38px 0 15px; }
+.legal-copy > p:first-child { margin-top: 0; }
+.legal-copy p { font-size: 15px; line-height: 1.85; }
+.legal-copy a { text-underline-offset: 3px; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 22px; }
+.footer-legal a { color: inherit; text-underline-offset: 4px; }
+.form-shell .form-note { font-size: 12px !important; line-height: 1.8; margin-block: 24px; }
+@media(max-width:860px) { .legal-layout { grid-template-columns: 1fr; gap: 38px; } .legal-nav { flex-direction: row; flex-wrap: wrap; gap: 16px 26px; } }
